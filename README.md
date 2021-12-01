@@ -4,9 +4,9 @@ Neural Network Optimization (NNO) algorithm
 
 Neural Network Optimization (NNO) algorithm for solving nonlinear least-squares (nonlinear data-fitting) problems. The NNO algorithm uses an Artificial Neural Network (ANN) coupled with an arbitrary optimization function, e.g. Genetic Algorithm (GA), towards minimizing the sum of squares of a vector-valued objective function OBJFUN. The ANN is used as a virtual internal objective function equivalent to OBJFUN. The GA algorithm is used for minimizing the ANN. The optimum solution of the ANN given by the GA will be the optimum solution of OBJFUN, since the ANN and the OBJFUN are equivalent. 
 It is shown in an example that the number of objective function evaluations required for the NNO algorithm is less than a half of the number of objective function evaluations required for the corresponding Matlab function lsqnonlin. This leads to substantial computational savings, especially if the objective function involves the execution of third-party software (e.g. for a FEA simulation).
-The optimization procedure goes as follows:
-(1) An initial set of training data is produced based on OBJFUN
-(2) The ANN is trained based on the above data set.
+The optimization procedure goes as follows: 
+(1) An initial set of training data is produced based on OBJFUN 
+(2) The ANN is trained based on the above data set. 
 (3) The ANN is used as an objective function in GA and is minimized.
 (4) OBJFUN is evaluated at the optimum solution that is found by GA.
 (5) This extra data is added at the initial set of training data, thus extending the data by one additional OBJFUN function evaluation.
